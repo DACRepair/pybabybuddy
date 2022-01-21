@@ -6,5 +6,5 @@ setup(name="pybabybuddy",
       author="Derek Vance",
       author_email="DACRepair@gmail.com",
       url="",
-      packages=["babybuddy", "babybuddy.BabyBuddy"],
+      packages=["babybuddy"],
       requires=["requests"])
