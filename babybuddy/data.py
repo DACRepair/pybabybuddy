@@ -32,7 +32,7 @@ class Child(BBAPIBaseObject):
             self.birth_date = datetime.date(*[int(x) for x in str(self.birth_date).split("-")])
 
     def __str__(self):
-        return f"Child ID: {self.id}: {self.first_name} {self.last_name}"
+        return f"<Child ID: {self.id}: {self.first_name} {self.last_name}>"
 
 
 class Diaper(BBAPIBaseObject):
@@ -52,7 +52,7 @@ class Diaper(BBAPIBaseObject):
             self.time = datetime.datetime.strptime(fmttime, "%Y-%m-%dT%H:%M:%S%z")
 
     def __str__(self):
-        return f"Diaper ID: {self.id}: Child {self.child}, {self.time}"
+        return f"<Diaper ID: {self.id}: Child {self.child}, {self.time}>"
 
 
 class Feeding(BBAPIBaseObject):
@@ -81,4 +81,4 @@ class Feeding(BBAPIBaseObject):
             self.duration = (((h * 60) + m) * 60) + s
 
     def __str__(self):
-        return f"Feeding ID: {self.id}: Child {self.child}, {self.start}, {self.duration}s"
+        return f"<Feeding ID: {self.id}: Child {self.child}, {self.start}, {self.duration}s>"
